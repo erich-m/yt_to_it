@@ -13,3 +13,5 @@ There are a few things to streamline information entry:
 
 Bugs:
 Does not work with URLs from YT playlists
+
+If the yt-dlp stops working, try updating: pip install --upgrade yt-dlp

@@ -6,9 +6,11 @@ import re
 
 def yt_download(yt_url:str):
     yt_opts = {
-        'extract_audio':True,
-        'format':'bestaudio',
-        'outtmpl': 'mp3_files/temp-track.webm'}
+        'extract_audio': True,
+        'format': 'bestaudio',
+        'outtmpl': 'mp3_files/temp-track.webm',
+        'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    }
     with yt_dlp.YoutubeDL(yt_opts) as audio:
         audio_info = audio.extract_info(yt_url,download=True)
         raw_title = audio_info['title']
